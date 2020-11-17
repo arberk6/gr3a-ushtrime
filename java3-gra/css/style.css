@@ -1,0 +1,39 @@
+.header-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 25%;
+    color: white;
+    /* pozicionohu ne baze te parentit */
+    position: relative;
+    /* pozicionohet ne baze te browserit */
+    min-height: 20vh;
+    top: 40vh;
+    left: 37.5%;
+    justify-content: space-around;
+    text-align: center;
+}
+
+header {
+    background-image: url('../img/UBT-LOGO.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* background-color: aqua; */
+    /* View-Width */
+    width: 100vw;
+    /* View-Height */
+    height: 100vh;
+}
+
+.flex-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
