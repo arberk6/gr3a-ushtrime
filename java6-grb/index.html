@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ushtrimet 5</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+
+  <style>
+    .link-container>a {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img id="ubtlogo" class="headerPhoto" src="UBT-LOGO.png" alt="UBT Logo" />
+    <ul class="headerList">
+      <li id="item">Home</li>
+      <li id="item">About us</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="link-container">
+      <a id="firstA" href="#" onclick="changeForm(0)">Login</a>
+      <a href="#" onclick="changeForm(1)">Register</a>
+    </div>
+    <form id="mainForm" action="">
+      <div class="login forms form-style">
+        <label for="">Username:</label>
+        <input type="text" id='usernameID' class="input" placeholder="username..." />
+        <label for="">Password:</label>
+        <input type="password" class="input" placeholder="password..." />
+        <input id="submit" type="button" class="input submit" value="Login" onclick="validate(0)" />
+      </div>
+      <div class="register forms hidden ">
+        <label for="">Name:</label>
+        <input type="text" class="input" placeholder="username..." />
+        <label for="">Lastname:</label>
+        <input type="text" class="input" placeholder="password..." />
+        <label for="">Password:</label>
+        <input type="text" class="input" name='' placeholder="password..." />
+        <input id="submit" type="button" class="input submit" value="Login" onclick="validate(1)" />
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <i>&copy;</i>
+
+    <h3>UBT - Prill 2020</h3>
+  </div>
+  <script>
+    const user = "arberk6";
+    const pass = "ubt";
+
+    function validate(number) {
+      var inputList = document.getElementsByClassName('input');
+
+      if (number == 0) {
+        //jemi tek login
+        var usernameValue = inputList[0].value;
+        var passowrdValue = inputList[1].value;
+        if (usernameValue == user && passowrdValue == pass) {
+          alert('login success')
+        } else {
+          alert('te dhenat gabim')
+          //dergo ne backend
+        }
+      } else if (number == 1) {
+        //jemi tek register
+      }
+    }
+
+    function changeForm(number) {
+      var divList = document.getElementsByClassName('forms');
+      if (number == 0) {
+        //shfaq login
+        divList[0].classList.remove("hidden");
+        divList[0].classList.add('form-style');
+        divList[1].classList.add("hidden");
+        divList[1].classList.remove('form-style');
+      } else if (number == 1) {
+        //shfaq register
+        divList[1].classList.remove("hidden");
+        divList[1].classList.add('form-style');
+        divList[0].classList.add("hidden");
+        divList[0].classList.remove('form-style');
+      }
+    }
+
+
+    var str = "string";
+    var numb = 2;
+    var bool = true;
+    var arr = ["", "", ''];
+
+    var nul = null;
+    var undef = NaN;
+    // var obj = { 
+
+    var x = "";
+    let y = "";
+    const z = "";
+    // console.log(str + 'asdsasdf');
+
+    var usernameElement = document.getElementById('usernameID').value;
+    var usernameElement1 = document.querySelector('.link-container>a'); //kthen te parin element
+    var usernameElement2 = document.querySelectorAll('.link-container>a'); //kthen krejt elementet
+
+    var usernameElement4 = document.getElementsByTagName('div');
+    var usernameElement5 = document.getElementsByName('nameSpecific');
+    // console.log(inputList[2]);
+  </script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     /* align-items: center; */
     text-align: center;
 }
@@ -20,7 +20,7 @@
 header {
     height: 100vh;
     width: 100vw;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 * {
@@ -36,8 +36,66 @@ header {
 
 .header-links>li {
     margin: 0 5px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 5px;
-    margin-right: 5px;
+    background-color: lightcoral;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.header-links>li:hover {
+    color: black;
+}
+
+.header-links>li:last-child {
+    background-color: purple;
+
+}
+
+.shadow {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: blue;
+    opacity: 0.6;
+}
+
+.header-item,
+.header-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-item {
+    margin: 5px 0;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+.upper-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-container-item {
+    border: 1px solid black;
+    flex-basis: 7vh;
+    width: 100vw;
+}
+
+.upper-container {
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+}
+
+.lines {
+    width: 2%;
+    height: 5%;
+    background-color: lightgray;
+}
+
+.lines:nth-child(2) {
+    background-color: gray;
 }
